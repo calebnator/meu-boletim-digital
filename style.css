@@ -177,6 +177,130 @@ body {
   padding: 20px;
 }
 
+/* ===== Área de Acesso via PIN ===== */
+.secao-acesso {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.card-acesso {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 24px;
+  text-align: center;
+}
+
+.card-acesso h2 {
+  font-size: 1.3rem;
+  color: var(--roxo);
+  margin-bottom: 16px;
+}
+
+.info-estudante {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--roxo-claro);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+.campo-grupo {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.campo-grupo label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.campo-grupo input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo-grupo input:focus {
+  border-color: var(--roxo);
+}
+
+.btn-principal {
+  background-color: var(--roxo);
+  color: var(--branco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-principal:hover {
+  opacity: 0.9;
+}
+
+.btn-secundario {
+  background-color: var(--branco);
+  color: var(--roxo);
+  border: 1px solid var(--roxo);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+  background-color: var(--roxo-claro);
+}
+
+.area-boletim-oculta {
+  display: none !important;
+}
+
+.painel-acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.mensagem-status {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-top: 8px;
+}
+
+/* Campos de edição na tabela */
+.campo-edicao-nota,
+.campo-edicao-falta {
+  width: 60px;
+  padding: 4px 6px;
+  text-align: center;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.campo-invalido {
+  border-color: #b23a3a !important;
+  background-color: #fde2e2 !important;
+}
+
 /* ===== Ajustes para telas pequenas ===== */
 @media (max-width: 600px) {
   .cabecalho h1 {

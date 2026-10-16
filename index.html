@@ -11,38 +11,69 @@
   <!-- Cabeçalho com título e subtítulo -->
   <header class="cabecalho">
     <h1>Boletim Digital</h1>
-    <p class="subtitulo">8º Ano — Estudante Exemplo</p>
+    <p class="subtitulo">8º Ano — Turma 8A — Chamada 5</p>
   </header>
 
   <main class="conteudo">
 
-    <!-- Área de cards de resumo (preenchidos pelo JavaScript) -->
-    <section class="cards" id="cardsResumo">
-      <!-- Os cards serão inseridos aqui pelo script.js -->
-    </section>
-
-    <!-- Tabela de notas (linhas preenchidas pelo JavaScript) -->
-    <section class="tabela-container">
-      <h2>Notas por Disciplina</h2>
-      <div class="tabela-wrapper">
-        <table class="tabela-boletim">
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <tbody id="corpoTabela">
-            <!-- As linhas serão inseridas aqui pelo script.js -->
-          </tbody>
-        </table>
+    <!-- Área de Acesso via PIN -->
+    <section class="secao-acesso" id="secaoAcesso">
+      <div class="card-acesso">
+        <h2>Acesso ao Boletim</h2>
+        <div class="info-estudante">
+          <span><strong>Turma:</strong> 8A</span>
+          <span><strong>Chamada:</strong> 5</span>
+        </div>
+        <form id="formAcesso" onsubmit="return false;">
+          <div class="campo-grupo">
+            <label for="campoPin">PIN do Estudante:</label>
+            <input type="password" id="campoPin" placeholder="Digite seu PIN" autocomplete="off" required />
+          </div>
+          <button type="submit" id="btnEntrar" class="btn-principal">Entrar</button>
+        </form>
+        <p id="mensagemAcesso" class="mensagem-status"></p>
       </div>
     </section>
+
+    <!-- Área Principal do Boletim (Oculta antes do login) -->
+    <div id="areaBoletim" class="area-boletim-oculta">
+
+      <!-- Painel de Ações / Edição -->
+      <section class="painel-acoes">
+        <button id="btnAlternarEdicao" class="btn-secundario">Alterar dados</button>
+        <button id="btnSalvar" class="btn-principal area-boletim-oculta">Salvar alterações</button>
+        <span id="mensagemStatus" class="mensagem-status"></span>
+      </section>
+
+      <!-- Área de cards de resumo (preenchidos pelo JavaScript) -->
+      <section class="cards" id="cardsResumo">
+        <!-- Os cards serão inseridos aqui pelo script.js -->
+      </section>
+
+      <!-- Tabela de notas (linhas preenchidas pelo JavaScript) -->
+      <section class="tabela-container">
+        <h2>Notas por Disciplina</h2>
+        <div class="tabela-wrapper">
+          <table class="tabela-boletim">
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody id="corpoTabela">
+              <!-- As linhas serão inseridas aqui pelo script.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 
