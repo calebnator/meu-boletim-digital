@@ -88,6 +88,62 @@ body {
   margin-top: 4px;
 }
 
+/* ===== Área dos Gráficos ===== */
+.area-graficos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.grafico-card {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grafico-card h2 {
+  font-size: 1.05rem;
+  color: var(--roxo);
+  margin-bottom: 12px;
+}
+
+.cabecalho-grafico-faltas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cabecalho-grafico-faltas h2 {
+  margin-bottom: 0;
+}
+
+.grafico-container {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 280px;
+}
+
+.badge-perigo {
+  background-color: #fde2e2;
+  color: #b23a3a;
+  border: 1px solid #b23a3a;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.card-perigo {
+  border: 2px solid #b23a3a;
+}
+
 /* ===== Tabela ===== */
 .tabela-container h2 {
   font-size: 1.2rem;
@@ -301,8 +357,18 @@ body {
   background-color: #fde2e2 !important;
 }
 
-/* ===== Ajustes para telas pequenas ===== */
+/* ===== Responsividade dos Gráficos ===== */
+@media (max-width: 900px) {
+  .area-graficos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
+  .area-graficos {
+    grid-template-columns: 1fr;
+  }
+
   .cabecalho h1 {
     font-size: 1.4rem;
   }
